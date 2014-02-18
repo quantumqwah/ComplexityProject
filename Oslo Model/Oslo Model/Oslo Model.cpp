@@ -19,7 +19,7 @@ int main()
 		{
 			 latt[0]++;
 	if(latt[l-1]!=0)
-	 
+
 		break;	
 		for ( int i=0; i< l-1&&latt[i]!=0; i++)
 			{
@@ -44,7 +44,7 @@ int main()
 	}
 		cout << endl;
 
-	if(input<=0)
+	if(input==0)
 	{
 	cin >> input;
 	}

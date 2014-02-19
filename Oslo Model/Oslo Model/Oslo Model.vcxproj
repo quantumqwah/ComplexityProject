@@ -77,6 +77,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Oslo Model.cpp" />
+    <ClCompile Include="slopefunctions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="slopefunction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Oslo Model.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

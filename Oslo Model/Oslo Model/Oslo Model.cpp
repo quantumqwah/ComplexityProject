@@ -18,6 +18,7 @@ int main()
 {
 	int l=100;
 	ofstream height("height vs time.txt");
+	ofstream averageslope("average slope vs time.txt");
 	vector<int> z(l,0);
 	vector<int> zth(l, 0);
 	int input=0;
@@ -92,7 +93,10 @@ int main()
 			heightnew=z[c]+heightold;
 			heightold=heightnew;
 		}
+			double heightdouble=heightold;
+			double length=l;
 
+			double slope=heightold/l;
 			
 				  
 		/*	for (int j=0; j<l; j++)
@@ -104,6 +108,7 @@ int main()
 
 			cout<< endl;*/				
 		height << t <<  '\t' << heightold<< endl;
+		averageslope << t << '\t' << slope << endl;
 	/*if(input==0)
 	{
 	cin >> input;

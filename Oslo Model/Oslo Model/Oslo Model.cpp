@@ -16,14 +16,13 @@ int z( vector<int> a, int i)
 
 int main()
 {
-	int l=10;
+	int l=100;
+	ofstream height("height vs time.txt");
 	vector<int> z(l,0);
 	vector<int> zth(l, 0);
-		    int input=0;
+	int input=0;
     
-	
-
-	for( int t=0 ;t < 10000 ; t++)
+	for( int t=0 ;t < 1000 ; t++)
 	{
 
 		z[0]=z[0]+1;
@@ -41,7 +40,6 @@ int main()
 			checkifrelax=0;	
 			if(z[0] > zth[0])
 				{
-				
 					z[0]=z[0]-2;
 					z[1]=z[1]+1;
 
@@ -84,22 +82,36 @@ int main()
 
 				
 		}
-						  for (int j=0; j<l; j++)
-				  {
-					cout << z[j] << " ";
-				  }
 
-				  cout<< endl;
-				 // cin.get();
+		  int heightold=0; 
+		  int heightnew=0;
+				  
 
+			for(int c=0; c<l; c++)
+		{
+			heightnew=z[c]+heightold;
+			heightold=heightnew;
+		}
 
+			
+				  
+		/*	for (int j=0; j<l; j++)
+		{
+			//cout << z[j] << " ";
+			//cout << t <<  '\t' << heightold<< endl;
+			
+		}
 
-	if(input==0)
+			cout<< endl;*/				
+		height << t <<  '\t' << heightold<< endl;
+	/*if(input==0)
 	{
 	cin >> input;
 	}
-	input--;
+	input--;*/
 				}
+
+	
 }
 	
 
